@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Load LOCAL logback when profile = local -->
+    <springProfile name="local">
+        <include resource="logback-local.xml"/>
+    </springProfile>
+
+    <!-- Load DEV logback when profile = dev -->
+    <springProfile name="dev">
+        <include resource="logback-dev.xml"/>
+    </springProfile>
+    
+     <!-- Production environment logging -->
+    <springProfile name="prod">
+        <include resource="logback-prod.xml"/>
+    </springProfile>
+
+</configuration>
